@@ -1,0 +1,17 @@
+* {
+    -background: -background-light;
+    -surface: -surface-light;
+    -surface-text: -surface-text-light;
+    -on-surface: -on-surface-light;
+    -on-surface-text: -on-surface-text-light;
+    -primary: -primary-light;
+    -primary-text: -primary-text-light;
+    -secondary: -secondary-light;
+    -secondary-text: -secondary-text-light;
+    -tertiary: -tertiary-light;
+    -tertiary-text: -tertiary-text-light;
+    -negative: -negative-light;
+    -negative-text: -negative-text-light;
+    -positive: -positive-light;
+    -positive-text: -positive-text-light;
+}

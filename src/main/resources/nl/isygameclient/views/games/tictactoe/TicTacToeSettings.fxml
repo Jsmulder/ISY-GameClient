@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Separator?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="nl.isygameclient.controllers.games.tictactoe.TicTacToeSettingsController"
+            prefHeight="400.0" prefWidth="600.0">
+
+
+                <!-- Difficulty Controls -->
+                <VBox>
+                    <Label text="Difficulty">
+                        <styleClass>
+                            <String fx:value="headline-small"/>
+                            <String fx:value="on-surface-variant-text"/>
+                        </styleClass>
+                    </Label>
+                    <Separator styleClass="on-surface-variant-text"/>
+                    <JFXComboBox fx:id="difficultyCombo" prefWidth="Infinity" onAction="#onDifficultyComboSelect">
+                        <styleClass>
+                            <String fx:value="primary"/>
+                            <String fx:value="on-primary-text"/>
+                            <String fx:value="body-large"/>
+                        </styleClass>
+                    </JFXComboBox>
+                </VBox>
+
+                <!-- Playing As Controls -->
+                <VBox>
+                    <Label text="Playing As">
+                        <styleClass>
+                            <String fx:value="headline-small"/>
+                            <String fx:value="on-surface-variant-text"/>
+                        </styleClass>
+                    </Label>
+                    <Separator styleClass="on-surface-variant-text"/>
+                    <JFXComboBox fx:id="playingAsCombo" prefWidth="Infinity" onAction="#onPlayingAsComboSelect">
+                        <styleClass>
+                            <String fx:value="primary"/>-->
+                            <String fx:value="on-primary-text"/>
+                            <String fx:value="body-large"/>
+                        </styleClass>
+                    </JFXComboBox>
+                </VBox>
+
+                <!-- Opponents Controls -->
+                <VBox>
+                    <Label text="Opponent">
+                        <styleClass>
+                            <String fx:value="headline-small"/>
+                            <String fx:value="on-surface-variant-text"/>
+                        </styleClass>
+                    </Label>
+                    <Separator styleClass="on-surface-variant-text"/>
+                    <JFXComboBox fx:id="opponentCombo" prefWidth="Infinity" onAction="#onOpponentComboSelect">
+                        <styleClass>
+                            <String fx:value="primary"/>-->
+                            <String fx:value="on-primary-text"/>
+                            <String fx:value="body-large"/>
+                        </styleClass>
+                    </JFXComboBox>
+                </VBox>
+
+                <!-- Best of Controls -->
+                <VBox>
+                    <Label text="Best Of">
+                        <styleClass>
+                            <String fx:value="headline-small"/>
+                            <String fx:value="on-surface-variant-text"/>
+                        </styleClass>
+                    </Label>
+                    <Separator styleClass="on-surface-variant-text"/>
+                </VBox>
+
+</AnchorPane>

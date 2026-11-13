@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.*?>
+<?import java.net.URL?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="nl.isygameclient.controllers.games.tictactoe.TicTacToeMainMenuController"
+            prefWidth="680" prefHeight="480">
+    <VBox alignment="CENTER" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0">
+        <styleClass>
+            <String fx:value="surface"/>
+        </styleClass>
+        <Label text="Tic Tac Toe">
+            <styleClass>
+                <String fx:value="display-large"/>
+                <String fx:value="on-surface-text"/>
+            </styleClass>
+            <padding>
+                <Insets topRightBottomLeft="50"/>
+            </padding>
+        </Label>
+        <VBox spacing="10" alignment="CENTER" maxWidth="200">
+            <JFXButton text="Single Player" onAction="#onSinglePlayerButtonClick" prefWidth="Infinity">
+                <styleClass>
+                    <String fx:value="primary"/>
+                    <String fx:value="on-primary-text"/>
+                    <String fx:value="title-medium"/>
+                </styleClass>
+            </JFXButton>
+            <JFXButton text="Multiplayer" onAction="#onMultiPlayerButtonClick" prefWidth="Infinity">
+                <styleClass>
+                    <String fx:value="primary"/>
+                    <String fx:value="on-primary-text"/>
+                    <String fx:value="title-medium"/>
+                </styleClass>
+            </JFXButton>
+            <JFXButton text="Exit" onAction="#onExitGameButtonClick" prefWidth="Infinity">
+                <styleClass>
+                    <String fx:value="primary"/>
+                    <String fx:value="on-primary-text"/>
+                    <String fx:value="title-medium"/>
+                </styleClass>
+            </JFXButton>
+        </VBox>
+    </VBox>
+    <stylesheets>
+        <URL value="@../../../css/style.css" />
+        <URL value="@../../../css/themes/dark.theme.css" />
+        <!--      <URL value="@../css/themes/light.theme.css" />-->
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,114 @@
+* {
+    -neutral-100: #242429;
+    -neutral-200: #303036;
+    -neutral-300: #484851;
+    -neutral-400: #60606C;
+    -neutral-500: #A0A0AB;
+    -neutral-600: #BBBBC3;
+    -neutral-700: #C9C9CF;
+    -neutral-800: #E4E4E7;
+    -neutral-900: #FAFAFA;
+
+    -primary-100: #291D49;
+    -primary-200: #3A2866;
+    -primary-300: #493280;
+    -primary-400: #573D9A;
+    -primary-500: #6E4FBA;
+    -primary-600: #866DC5;
+    -primary-700: #9E8AD1;
+    -primary-800: #B3A4DB;
+    -primary-900: #D2C8E9;
+
+    -secondary-100: #1D2749;
+    -secondary-200: #293666;
+    -secondary-300: #334380;
+    -secondary-400: #3D5199;
+    -secondary-500: #5067B9;
+    -secondary-600: #6D80C5;
+    -secondary-700: #8A99D0;
+    -secondary-800: #A4B0DB;
+    -secondary-900: #C8CFE9;
+
+    -tertiary-100: #663200;
+    -tertiary-200: #994C00;
+    -tertiary-300: #D66A00;
+    -tertiary-400: #FF8914;
+    -tertiary-500: #FF9833;
+    -tertiary-600: #FFA54C;
+    -tertiary-700: #FFB770;
+    -tertiary-800: #FFCB99;
+    -tertiary-900: #FFE3C7;
+
+    -negative-100: #5C0A0A;
+    -negative-200: #8A0F0F;
+    -negative-300: #A11212;
+    -negative-400: #B81414;
+    -negative-500: #CF1717;
+    -negative-600: #E93F3F;
+    -negative-700: #ED5F5F;
+    -negative-800: #F28C8D;
+    -negative-900: #F7BABA;
+
+    -positive-100: #194D1D;
+    -positive-200: #206024;
+    -positive-300: #2D8632;
+    -positive-400: #33993A;
+    -positive-500: #39AC41;
+    -positive-600: #53C65A;
+    -positive-700: #79D27F;
+    -positive-800: #9FDFA3;
+    -positive-900: #C6ECC8;
+
+    -black: #000;
+    -white: #fff;
+
+
+    /* Dark Theme Variables */
+    -background-dark: -neutral-100;
+    
+    -surface-dark: -neutral-200;
+    -surface-text-dark: -neutral-400;
+
+    -on-surface-dark: -neutral-300;
+    -on-surface-text-dark: -neutral-700;
+
+    -primary-dark: -primary-800;
+    -primary-text-dark: -primary-400;
+
+    -secondary-dark: -secondary-800;
+    -secondary-text-dark: -secondary-400;
+
+    -tertiary-dark: -tertiary-800;
+    -tertiary-text-dark: -tertiary-400;
+
+    -negative-dark: -negative-800;
+    -negative-text-dark: -negative-400;
+
+    -positive-dark: -positive-800;
+    -positive-text-dark: -positive-400;
+
+    
+    /* Light Theme Variables */
+    -background-light: -neutral-700;
+    
+    -surface-light: -neutral-800;
+    -surface-text-light: -neutral-400;
+
+    -on-surface-light: -neutral-900;
+    -on-surface-text-light: -neutral-400;
+
+    -primary-light: -primary-500;
+    -primary-text-light: -primary-800;
+
+    -secondary-light: -secondary-500;
+    -secondary-text-light: -secondary-800;
+
+    -tertiary-light: -tertiary-500;
+    -tertiary-text-light: -tertiary-800;
+
+    -negative-light: -negative-500;
+    -negative-text-light: -negative-800;
+
+    -positive-light: -positive-500;
+    -positive-text-light: -positive-800;
+}

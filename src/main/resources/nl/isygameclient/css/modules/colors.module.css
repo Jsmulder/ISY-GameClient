@@ -1,0 +1,74 @@
+.background {
+    -fx-background-color: -background;
+}
+
+/* Surface */
+.surface {
+    -fx-background-color: -surface;
+}
+
+.surface-text {
+    -fx-fill: -surface-text;
+    -fx-text-fill: -surface-text;
+}
+
+/* On Surface */
+.on-surface {
+    -fx-fill: -on-surface;
+    -fx-background-color: -on-surface;
+}
+
+.on-surface-text {
+    -fx-fill: -on-surface-text;
+    -fx-text-fill: -on-surface-text;
+}
+
+/* Primary */
+.primary {
+    -fx-background-color: -primary;
+}
+
+.primary-text {
+    -fx-fill: -primary-text;
+    -fx-text-fill: -primary-text;
+}
+
+/* Secondary */
+.secondary {
+    -fx-background-color: -secondary;
+}
+
+.secondary-text {
+    -fx-fill: -secondary-text;
+    -fx-text-fill: -secondary-text;
+}
+
+/* Tertiary */
+.tertiary {
+    -fx-background-color: -tertiary;
+}
+
+.tertiary-text {
+    -fx-fill: -tertiary-text;
+    -fx-text-fill: -tertiary-text;
+}
+
+/* Negative */
+.negative {
+    -fx-background-color: -negative;
+}
+
+.negative-text {
+    -fx-fill: -negative-text;
+    -fx-text-fill: -negative-text;
+}
+
+/* Positive */
+.positive {
+    -fx-background-color: -positive;
+}
+
+.positive-text {
+    -fx-fill: -positive-text;
+    -fx-text-fill: -positive-text;
+}

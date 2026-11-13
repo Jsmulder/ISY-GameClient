@@ -1,0 +1,17 @@
+* {
+    -background: -background-dark;
+    -surface: -surface-dark;
+    -surface-text: -surface-text-dark;
+    -on-surface: -on-surface-dark;
+    -on-surface-text: -on-surface-text-dark;
+    -primary: -primary-dark;
+    -primary-text: -primary-text-dark;
+    -secondary: -secondary-dark;
+    -secondary-text: -secondary-text-dark;
+    -tertiary: -tertiary-dark;
+    -tertiary-text: -tertiary-text-dark;
+    -negative: -negative-dark;
+    -negative-text: -negative-text-dark;
+    -positive: -positive-dark;
+    -positive-text: -positive-text-dark;
+}

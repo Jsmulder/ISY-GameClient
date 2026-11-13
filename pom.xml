@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>nl.isygameclient</groupId>
+    <artifactId>ISYGameClient</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>ISYGameClient</name>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit.version>5.9.0</junit.version>
+    </properties>
+    <dependencies>
+
+        <!-- JavaFx Dependencies -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>19</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>19</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.controlsfx</groupId>
+            <artifactId>controlsfx</artifactId>
+            <version>11.1.2</version>
+        </dependency>
+
+        <!-- JavaFX Styling Dependencies -->
+        <dependency>
+            <groupId>com.jfoenix</groupId>
+            <artifactId>jfoenix</artifactId>
+            <version>9.0.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/de.jensd/fontawesomefx-commons -->
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx-commons</artifactId>
+            <version>9.1.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/de.jensd/fontawesomefx-materialicons -->
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx-materialicons</artifactId>
+            <version>2.2.0-9.1.2</version>
+        </dependency>
+
+        <!-- GSON Dependencies -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>31.1-jre</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+
+
+        <!-- Junit Dependencies -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Data Export -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>16</source>
+                    <target>16</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- More Project Information -->
+    <organization>
+        <name>Hanze Hogeschool Groningen</name>
+        <url>https://www.hanze.nl</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>afko</id>
+            <name>Arend Frederik Koens</name>
+            <email>a.f.koens@st.hanze.nl</email>
+            <organization>Hanze Hogeschool Groningen</organization>
+            <organizationUrl>https://www.hanze.nl</organizationUrl>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>Nederland/Amsterdam</timezone>
+        </developer>
+        <developer>
+            <id>jomu</id>
+            <name>Johs Mulder</name>
+            <email>r.j.mulder@st.hanze.nl</email>
+            <organization>Hanze Hogeschool Groningen</organization>
+            <organizationUrl>https://www.hanze.nl</organizationUrl>
+            <roles>
+                <role>Designer</role>
+                <role>Software Engineer</role>
+            </roles>
+            <timezone>Nederland/Amsterdam</timezone>
+        </developer>
+        <developer>
+            <id>frsh</id>
+            <name>Friedel Schön</name>
+            <email>f.schon@st.hanze.nl</email>
+            <organization>Hanze Hogeschool Groningen</organization>
+            <organizationUrl>https://www.hanze.nl</organizationUrl>
+            <roles>
+                <role>Software Engineer</role>
+            </roles>
+            <timezone>Nederland/Amsterdam</timezone>
+        </developer>
+    </developers>
+    <contributors>
+        <contributor>
+            <name>Erik Roos</name>
+            <email>t.e.roos@pl.hanze.nl</email>
+            <organization>Hanze Hogeschool Groningen</organization>
+            <organizationUrl>http://hanze.nl</organizationUrl>
+            <roles>
+                <role>stake-holder</role>
+                <role>tester</role>
+            </roles>
+            <timezone>Nederland/Amsterdam</timezone>
+            <properties>
+                <gtalk>some.name@gmail.com</gtalk>
+            </properties>
+        </contributor>
+    </contributors>
+</project>

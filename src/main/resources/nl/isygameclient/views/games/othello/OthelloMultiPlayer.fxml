@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="nl.isygameclient.controllers.games.othello.OthelloMultiPlayerController">
+    <styleClass>
+        <String fx:value="background" />
+    </styleClass>
+    <left>
+        <VBox prefWidth="200" spacing="20" styleClass="surface">
+            <padding>
+                <Insets topRightBottomLeft="20" />
+            </padding>
+            <Label text="Host" styleClass="surface-text"/>
+            <TextField fx:id="hostField"/>
+            <Label text="Port" styleClass="surface-text"/>
+            <TextField fx:id="portField"/>
+            <Label text="Player Name" styleClass="surface-text"/>
+            <TextField fx:id="nameField" />
+            <Label text="Opponent Name" styleClass="surface-text"/>
+            <TextField fx:id="opponentField"/>
+            <!-- Window Controls -->
+            <Pane VBox.vgrow="ALWAYS" />
+            <VBox alignment="CENTER" spacing="10">
+                <JFXButton onAction="#onNewGameButtonClick" prefWidth="Infinity" text="New Game">
+                    <styleClass>
+                        <String fx:value="primary" />
+                        <String fx:value="primary-text" />
+                        <String fx:value="title-medium" />
+                    </styleClass>
+                </JFXButton>
+                <JFXButton onAction="#onMainMenuButtonClick" prefWidth="Infinity" text="Main Menu">
+                    <styleClass>
+                        <String fx:value="primary" />
+                        <String fx:value="primary-text" />
+                        <String fx:value="title-medium" />
+                    </styleClass>
+                </JFXButton>
+            </VBox>
+        </VBox>
+    </left>
+    <center>
+        <GridPane fx:id="boardGrid" alignment="CENTER" hgap="2" vgap="2">
+            <padding>
+                <Insets topRightBottomLeft="10" />
+            </padding>
+        </GridPane>
+    </center>
+    <stylesheets>
+        <URL value="@../../../css/style.css" />
+        <URL value="@../../../css/themes/dark.theme.css" />
+        <!--      <URL value="@../../../css/themes/light.theme.css" />-->
+    </stylesheets>
+</BorderPane>

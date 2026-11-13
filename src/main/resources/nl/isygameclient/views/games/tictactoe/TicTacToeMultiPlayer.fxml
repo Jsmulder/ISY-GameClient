@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.isygameclient.controllers.games.tictactoe.TicTacToeMultiPlayerController">
+	<styleClass>
+		<String fx:value="surface" />
+	</styleClass>
+	<left>
+		<VBox prefWidth="200" spacing="20" styleClass="surface-variant">
+			<padding>
+				<Insets topRightBottomLeft="20" />
+			</padding>
+
+			<!-- Playing As Controls -->
+			<VBox>
+				<Label text="Playing As">
+					<styleClass>
+						<String fx:value="headline-small" />
+						<String fx:value="on-surface-variant-text" />
+					</styleClass>
+				</Label>
+				<Separator styleClass="on-surface-variant-text" />
+				<JFXComboBox fx:id="playingAsCombo" onAction="#onPlayingAsComboSelect" prefWidth="Infinity">
+					<styleClass>
+						<String fx:value="primary" />
+						-->
+						<String fx:value="on-primary-text" />
+						<String fx:value="body-large" />
+					</styleClass>
+				</JFXComboBox>
+			</VBox>
+			<VBox>
+				<Label text="Opponent">
+					<styleClass>
+						<String fx:value="headline-small" />
+						<String fx:value="on-surface-variant-text" />
+					</styleClass>
+				</Label>
+				<Separator styleClass="on-surface-variant-text" />
+				<Label fx:id="playingAgainstLabel" prefWidth="Infinity">
+					<styleClass>
+						<String fx:value="headline-small" />
+						<String fx:value="on-surface-variant-text" />
+					</styleClass>
+				</Label>
+			</VBox>
+			<VBox>
+				<children>
+					<Label text="Player">
+						<styleClass>
+							<String fx:value="headline-small" />
+							<String fx:value="on-surface-variant-text" />
+						</styleClass>
+					</Label>
+					<Separator styleClass="on-surface-variant-text" />
+					<TextField fx:id="nameField" promptText="Your Name" />
+					<TextField fx:id="opponentField" promptText="Opponent (optional)" />
+				</children>
+			</VBox>
+
+			<!-- Best of Controls -->
+			<VBox>
+				<Label text="Server">
+					<styleClass>
+						<String fx:value="headline-small" />
+						<String fx:value="on-surface-variant-text" />
+					</styleClass>
+				</Label>
+				<Separator styleClass="on-surface-variant-text" />
+				<HBox prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<TextField fx:id="hostField" promptText="Host" />
+						<TextField fx:id="portField" alignment="CENTER_RIGHT" promptText="Port" text="7789" />
+					</children>
+				</HBox>
+			</VBox>
+
+			<!-- Window Controls -->
+			<Pane VBox.vgrow="ALWAYS" />
+			<VBox alignment="CENTER" spacing="10">
+				<JFXButton onAction="#onNewGameButtonClick" prefWidth="Infinity" text="New Game">
+					<styleClass>
+						<String fx:value="primary" />
+						<String fx:value="on-primary-text" />
+						<String fx:value="title-medium" />
+					</styleClass>
+				</JFXButton>
+				<JFXButton onAction="#onMainMenuButtonClick" prefWidth="Infinity" text="Main Menu">
+					<styleClass>
+						<String fx:value="primary" />
+						<String fx:value="on-primary-text" />
+						<String fx:value="title-medium" />
+					</styleClass>
+				</JFXButton>
+			</VBox>
+		</VBox>
+	</left>
+	<!--  Game Field  -->
+	<center>
+		<HBox alignment="CENTER">
+			<padding>
+				<Insets topRightBottomLeft="20" />
+			</padding>
+
+			<!-- Left -->
+			<VBox alignment="TOP_CENTER" maxHeight="800" minWidth="150">
+				<Label text="Score Player">
+					<styleClass>
+						<String fx:value="headline-medium" />
+						<String fx:value="on-surface-text" />
+					</styleClass>
+				</Label>
+				<Label text="0">
+					<styleClass>
+						<String fx:value="headline-medium" />
+						<String fx:value="on-surface-text" />
+					</styleClass>
+				</Label>
+				<Separator maxWidth="100" />
+			</VBox>
+
+			<!-- Center -->
+			<VBox alignment="CENTER" minWidth="640">
+				<HBox alignment="CENTER">
+					<padding>
+						<Insets topRightBottomLeft="5" />
+					</padding>
+					<Label text="Current Player: ">
+						<styleClass>
+							<String fx:value="on-surface-text" />
+							<String fx:value="headline-small" />
+						</styleClass>
+					</Label>
+					<Label fx:id="currentPlayer">
+						<styleClass>
+							<String fx:value="on-surface-text" />
+							<String fx:value="headline-small" />
+						</styleClass>
+					</Label>
+				</HBox>
+				<Separator maxWidth="100" />
+
+				<StackPane>
+					<VBox.margin>
+						<Insets left="20" right="20" top="20" />
+					</VBox.margin>
+					<GridPane fx:id="grid" hgap="10" maxHeight="640" maxWidth="640" styleClass="ttt-grid" vgap="10">
+						<padding>
+							<Insets topRightBottomLeft="10" />
+						</padding>
+					</GridPane>
+					<Label fx:id="gameOverText" visible="false">
+						<padding>
+							<Insets bottom="10" left="20" right="20" top="10" />
+						</padding>
+						<styleClass>
+							<String fx:value="surface" />
+							<String fx:value="display-large" />
+							<String fx:value="on-surface-text" />
+						</styleClass>
+					</Label>
+				</StackPane>
+			</VBox>
+
+			<!-- Right -->
+			<VBox alignment="TOP_CENTER" maxHeight="800" minWidth="150">
+				<Label text="Score Opponent">
+					<styleClass>
+						<String fx:value="headline-medium" />
+						<String fx:value="on-surface-text" />
+					</styleClass>
+				</Label>
+				<Label text="0">
+					<styleClass>
+						<String fx:value="headline-medium" />
+						<String fx:value="on-surface-text" />
+					</styleClass>
+				</Label>
+				<Separator maxWidth="100" />
+			</VBox>
+		</HBox>
+	</center>
+	<stylesheets>
+		<URL value="@../../../css/style.css" />
+		<URL value="@../../../css/themes/dark.theme.css" />
+		<!--      <URL value="@../css/themes/light.theme.css" />-->
+	</stylesheets>
+</BorderPane>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="nl.isygameclient.controllers.games.tictactoe.TicTacToeSinglePlayerController">
+    <styleClass>
+        <String fx:value="background"/>
+    </styleClass>
+    <left>
+        <VBox prefWidth="200" styleClass="surface" spacing="20" >
+            <padding>
+                <Insets topRightBottomLeft="20"/>
+            </padding>
+
+<!--            &lt;!&ndash; Difficulty Controls &ndash;&gt;-->
+<!--            <VBox>-->
+<!--                <Label text="Difficulty">-->
+<!--                    <styleClass>-->
+<!--                        <String fx:value="headline-small"/>-->
+<!--                        <String fx:value="on-surface-variant-text"/>-->
+<!--                    </styleClass>-->
+<!--                </Label>-->
+<!--                <Separator styleClass="on-surface-variant-text"/>-->
+<!--                <JFXComboBox fx:id="difficultyCombo" prefWidth="Infinity" onAction="#onDifficultyComboSelect">-->
+<!--                    <styleClass>-->
+<!--                        <String fx:value="primary"/>-->
+<!--                        <String fx:value="on-primary-text"/>-->
+<!--                        <String fx:value="body-large"/>-->
+<!--                    </styleClass>-->
+<!--                </JFXComboBox>-->
+<!--            </VBox>-->
+
+<!--            &lt;!&ndash; Playing As Controls &ndash;&gt;-->
+<!--            <VBox>-->
+<!--                <Label text="Playing As">-->
+<!--                    <styleClass>-->
+<!--                        <String fx:value="headline-small"/>-->
+<!--                        <String fx:value="on-surface-variant-text"/>-->
+<!--                    </styleClass>-->
+<!--                </Label>-->
+<!--                <Separator styleClass="on-surface-variant-text"/>-->
+<!--                <JFXComboBox fx:id="playingAsCombo" prefWidth="Infinity" onAction="#onPlayingAsComboSelect">-->
+<!--                    <styleClass>-->
+<!--                        <String fx:value="primary"/>&ndash;&gt;-->
+<!--                        <String fx:value="on-primary-text"/>-->
+<!--                        <String fx:value="body-large"/>-->
+<!--                    </styleClass>-->
+<!--                </JFXComboBox>-->
+<!--            </VBox>-->
+
+<!--            &lt;!&ndash; Opponents Controls &ndash;&gt;-->
+<!--            <VBox>-->
+<!--                <Label text="Opponent">-->
+<!--                    <styleClass>-->
+<!--                        <String fx:value="headline-small"/>-->
+<!--                        <String fx:value="on-surface-variant-text"/>-->
+<!--                    </styleClass>-->
+<!--                </Label>-->
+<!--                <Separator styleClass="on-surface-variant-text"/>-->
+<!--                <JFXComboBox fx:id="opponentCombo" prefWidth="Infinity" onAction="#onOpponentComboSelect">-->
+<!--                    <styleClass>-->
+<!--                        <String fx:value="primary"/>&ndash;&gt;-->
+<!--                        <String fx:value="on-primary-text"/>-->
+<!--                        <String fx:value="body-large"/>-->
+<!--                    </styleClass>-->
+<!--                </JFXComboBox>-->
+<!--            </VBox>-->
+
+<!--            &lt;!&ndash; Best of Controls &ndash;&gt;-->
+<!--            <VBox>-->
+<!--                <Label text="Best Of">-->
+<!--                    <styleClass>-->
+<!--                        <String fx:value="headline-small"/>-->
+<!--                        <String fx:value="on-surface-variant-text"/>-->
+<!--                    </styleClass>-->
+<!--                </Label>-->
+<!--                <Separator styleClass="on-surface-variant-text"/>-->
+<!--            </VBox>-->
+
+            <!-- Window Controls -->
+            <Pane VBox.vgrow="ALWAYS"/>
+            <VBox spacing="10" alignment="CENTER">
+                <JFXButton text="New Game" onAction="#onNewGameButtonClick" prefWidth="Infinity">
+                    <styleClass>
+                        <String fx:value="primary"/>
+                        <String fx:value="primary-text"/>
+                        <String fx:value="title-medium"/>
+                    </styleClass>
+                </JFXButton>
+                <JFXButton text="Main Menu" onAction="#onMainMenuButtonClick" prefWidth="Infinity">
+                    <styleClass>
+                        <String fx:value="primary"/>
+                        <String fx:value="primary-text"/>
+                        <String fx:value="title-medium"/>
+                    </styleClass>
+                </JFXButton>
+            </VBox>
+        </VBox>
+    </left>
+    <!--  Game Field  -->
+    <center>
+        <HBox alignment="CENTER">
+            <padding>
+                <Insets topRightBottomLeft="20"/>
+            </padding>
+
+            <!-- Left -->
+            <VBox minWidth="150" maxHeight="800" alignment="TOP_CENTER">
+                <Label text="Score Player">
+                    <styleClass>
+                        <String fx:value="headline-medium"/>
+                        <String fx:value="on-surface-text"/>
+                    </styleClass>
+                </Label>
+                <Label text="0">
+                    <styleClass>
+                        <String fx:value="headline-medium"/>
+                        <String fx:value="on-surface-text"/>
+                    </styleClass>
+                </Label>
+                <Separator maxWidth="100"/>
+            </VBox>
+
+            <!-- Center -->
+            <VBox alignment="CENTER" minWidth="640">
+                <HBox alignment="CENTER">
+                    <padding>
+                        <Insets topRightBottomLeft="5"/>
+                    </padding>
+                    <Label text="Current Player: ">
+                        <styleClass>
+                            <String fx:value="on-surface-text"/>
+                            <String fx:value="headline-small"/>
+                        </styleClass>
+                    </Label>
+                    <Label fx:id="currentPlayer">
+                        <styleClass>
+                            <String fx:value="on-surface-text"/>
+                            <String fx:value="headline-small"/>
+                        </styleClass>
+                    </Label>
+                </HBox>
+                <Separator maxWidth="100"/>
+
+                <StackPane>
+                    <VBox.margin>
+                        <Insets left="20" right="20" top="20"/>
+                    </VBox.margin>
+                    <GridPane fx:id="grid" styleClass="ttt-grid" vgap="10" hgap="10" maxWidth="640" maxHeight="640">
+                        <padding>
+                            <Insets topRightBottomLeft="10"/>
+                        </padding>
+                    </GridPane>
+                        <Label fx:id="gameOverText" visible="false">
+                            <padding>
+                                <Insets top="10" bottom="10" left="20" right="20"/>
+                            </padding>
+                            <styleClass>
+                                <String fx:value="surface"/>
+                                <String fx:value="display-large"/>
+                                <String fx:value="on-surface-text"/>
+                            </styleClass>
+                        </Label>
+                </StackPane>
+            </VBox>
+
+            <!-- Right -->
+            <VBox minWidth="150" maxHeight="800" alignment="TOP_CENTER">
+                <Label text="Score Opponent">
+                    <styleClass>
+                        <String fx:value="headline-medium"/>
+                        <String fx:value="on-surface-text"/>
+                    </styleClass>
+                </Label>
+                <Label text="0">
+                    <styleClass>
+                        <String fx:value="headline-medium"/>
+                        <String fx:value="on-surface-text"/>
+                    </styleClass>
+                </Label>
+                <Separator maxWidth="100"/>
+            </VBox>
+        </HBox>
+    </center>
+    <stylesheets>
+        <URL value="@../../../css/style.css" />
+<!--        <URL value="@../../../css/themes/light.theme.css" />-->
+        <URL value="@../../../css/themes/dark.theme.css" />
+    </stylesheets>
+</BorderPane>

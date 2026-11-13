@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="app" prefHeight="1024.0" prefWidth="1440.0" styleClass="background" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="nl.isygameclient.controllers.AppController">
+   <left>
+      <VBox alignment="CENTER_LEFT" prefHeight="994.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <VBox fx:id="navBar" spacing="15.0"/>
+            <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0">
+               <children>
+                  <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="50.0" prefWidth="200.0" styleClass="user-account" text="UserName">
+                     <graphic>
+                        <MaterialIconView glyphName="ACCOUNT_CIRCLE" size="30" styleClass="icon" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <JFXButton onAction="#onSettingsButtonPressed" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="50.0" styleClass="settings">
+                     <graphic>
+                        <MaterialIconView glyphName="SETTINGS" size="30" styleClass="surface-text" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets right="15.0" />
+         </BorderPane.margin>
+         <styleClass>
+            <String fx:value="surface" />
+            <String fx:value="rounded" />
+         </styleClass>
+         <padding>
+            <Insets right="5.0" top="15.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </left>
+   <center>
+   </center>
+   <stylesheets>
+      <URL value="@../css/style.css" />
+      <URL value="@../css/themes/dark.theme.css" />
+      <!--      <URL value="@../css/themes/light.theme.css" />-->
+   </stylesheets>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</BorderPane>

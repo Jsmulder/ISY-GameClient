@@ -1,0 +1,113 @@
+@import url(./modules/typography.module.css);
+@import url(./modules/colors.module.css);
+@import url(./tokens.css);
+
+.transparent {
+  -fx-background-color: transparent;
+  -fx-control-inner-background: transparent;
+  -fx-text-fill: transparent;
+  -fx-fill: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.rounded {
+  -fx-border-radius: 10px;
+  -fx-background-radius: 10px;
+}
+
+.nav-button {
+  -fx-fill: -primary-text;
+
+  -fx-border-color: -primary;
+  -fx-border-width: 0 0 0 0.4em;
+
+  -fx-text-fill: -primary;
+}
+
+.nav-button .icon {
+  -fx-fill: -primary;
+  -glyph-size: 24;
+}
+
+.nav-button.active {
+  -fx-background-color: -primary;
+  -fx-fill: -primary-text;
+
+  -fx-border-color: -primary-text;
+  -fx-border-width: 0 0 0 0.4em;
+
+  -fx-text-fill: -primary-text;
+}
+
+.nav-button.active .icon {
+  -fx-fill: -primary-text;
+  -glyph-size: 24;
+}
+
+.search-bar {
+  -fx-background-color: -surface;
+  -fx-background-radius: 10px;
+}
+
+.search-bar .icon {
+  -fx-fill: -surface-text;
+}
+
+.search-textfield {
+  -fx-text-fill: -primary;
+
+  -fx-highlight-fill: -primary;
+
+  -jfx-focus-color: -primary;
+  -jfx-unfocus-color: -surface;
+}
+
+.search-loop,
+.search-close,
+.search-options {
+  -fx-background-color: -surface;
+  -fx-background-radius: 10px;
+}
+
+.search-loop .icon,
+.search-close .icon,
+.search-options .icon {
+  -fx-fill: -primary;
+  -glyph-size: 24;
+}
+
+.user-account {
+  -fx-text-fill: -on-surface-text;
+}
+
+.user-account .icon {
+  -fx-fill: -primary;
+}
+
+.settings {}
+
+.play-arrow {
+
+}
+
+.play-arrow .icon {
+  -fx-fill: -positive;
+}
+
+.othello-button {
+    -fx-background-color: #388E3C;
+}
+
+.ttt-grid {
+    -fx-border-color: -on-surface;
+    -fx-border-width: 5;
+    -fx-border-radius: 2;
+  }
+
+.ttt-button {
+  -fx-background-color: -on-surface;
+  -fx-text-fill: -on-surface-text;
+}
